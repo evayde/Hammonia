@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="ProjectCreateView" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.projectManagement.ProjectComponent">
+    <stylesheets>
+        <URL value="@ProjectCreateView.css"/>
+    </stylesheets>
+   <children>
+       <GridPane styleClass="profileTab">
+           <Label text="%project.create" styleClass="h1" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3"></Label>
+           
+           <Label text="%project.name" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1"></Label>
+           <TextField fx:id="projectName" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="1"></TextField>
+           
+           <Label text="%project.learnProject" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1"></Label>
+           <CheckBox fx:id="isLearnproject" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="1"></CheckBox>
+           
+           <Label text="%project.addUser" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="1"></Label>
+           <ComboBox fx:id="userList" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="1"></ComboBox>
+           <ComboBox fx:id="userRole" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.columnSpan="1"></ComboBox>
+           <Button onAction="#addUserAction" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.columnSpan="1" text="%project.addUser"></Button>
+           
+           <Label text="%project.user" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1"></Label>
+           <ListView fx:id="usersListView" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1"></ListView>
+           
+           
+           <Button onAction="#saveProjectAction" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="1" styleClass="form-button" text="%project.save"></Button>
+       </GridPane>
+   </children>
+</AnchorPane>

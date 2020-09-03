@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane id="ProjectNewMDView" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ham.client.projectManagement.ProjectMdComponent">
+    <stylesheets>
+        <URL value="@ProjectNewMDView.css" />
+    </stylesheets>
+    <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox>
+               <children>
+                      <Label text="%project.name" />
+                      <Label fx:id="projectName" text="" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                      
+                      <Label text="%file.name" />
+                      <TextField fx:id="fileName" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+                
+                <TextArea fx:id="editor" prefHeight="400.0" prefWidth="500.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextArea>
+                <Button onAction="#saveFileAction" styleClass="form-button" text="%project.addFile">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="projectListView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.projectManagement.ProjectListComponent">
+    <stylesheets>
+        <URL value="@/ham/client/projectManagement/ProjectListView.css" />
+    </stylesheets>
+   <children>
+      <TreeView fx:id="projectTreeView">
+      </TreeView>
+   </children>
+</AnchorPane>

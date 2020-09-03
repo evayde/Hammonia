@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="mainView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.MainComponent">
+    <stylesheets>
+        <URL value="@Globals_dark.css" />
+        <URL value="@MainView.css" />
+        <URL value="@MainStyle.css" />
+    </stylesheets>  
+<top>
+    <MenuBar styleClass="mainNav" BorderPane.alignment="CENTER">
+      <menus>
+        <Menu text="%menu.file">
+          <items>
+            <Menu text="%menu.new">
+               <items>
+                 <MenuItem onAction="#menuNewAction" text="%menu.newClassDiagram">
+                     <accelerator>
+                         <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                 </MenuItem>
+                 <MenuItem onAction="#menuNewMdAction" text="%menu.newMd" />
+               </items>
+            </Menu>
+            <MenuItem onAction="#menuSaveAction" text="%menu.save">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <MenuItem onAction="#menuOpenAction" text="%menu.open">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
+            <SeparatorMenuItem />
+            <MenuItem onAction="#menuCloseAction" text="%menu.close" />
+          </items>
+        </Menu>
+        <Menu disable="true" text="%menu.edit">
+          <items>
+            <MenuItem disable="true" text="%menu.undo" />
+            <MenuItem disable="true" text="%menu.redo" />
+            <SeparatorMenuItem />
+            <MenuItem text="%menu.copy" />
+            <MenuItem text="%menu.paste" />
+            <MenuItem text="%menu.delete" />
+          </items>
+        </Menu>
+        <Menu fx:id="userMenu" disable="true" text="%menu.user"> 
+            <items>
+                <MenuItem onAction="#showProfileTabAction" text="%menu.profile" />
+                <SeparatorMenuItem />
+                <MenuItem onAction="#showProjectListAction" text="%menu.projectList" />
+                <SeparatorMenuItem />
+                <Menu text="%menu.adminArea">
+                    <items>
+                        <MenuItem onAction="#showAdminAreaAction" text="%overview" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#showAdminCreateUserAction" text="%newuser" />
+                    </items>
+                </Menu>
+                <MenuItem text="%menu.docentArea" />
+            </items>
+        </Menu>
+        <Menu fx:id="projectMenu" disable="true" text="%menu.projects">
+            <items>
+                <MenuItem onAction="#showProjectOverviewAction" text="%overview" />
+                <MenuItem onAction="#showCreateProjectAction" text="%menu.newproject" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem onAction="#showProjectsAction" text="%menu.projectListView" />
+            </items>
+        </Menu>
+        <Menu text="%menu.groups">
+            <items>
+                <MenuItem fx:id="showLoginView" onAction="#showConnectTabAction" text="%menu.connect">
+                    <accelerator>
+                        <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                </MenuItem>
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem onAction="#showLearnProjectsAction" text="%menu.exercises" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem onAction="#showTicketsAction" text="%menu.ticketListView" />
+            </items> 
+        </Menu>
+            <Menu mnemonicParsing="false" text="%menue.editor">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#editorGlobalSettingsAction" text="%menue.globalsettings" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem onAction="#showToolBoxAction" text="%menu.toolBoxView" />
+                  <MenuItem onAction="#showPropertyAction" text="%menu.propertyView" />
+                  <MenuItem mnemonicParsing="false" onAction="#showHistoryAction" text="%menue.historyView" />
+                  <MenuItem mnemonicParsing="false" onAction="#chatViewAction" text="%menu.chatView" />
+               </items>
+            </Menu>
+        <Menu text="%menu.view">
+          <items>
+                  <Menu mnemonicParsing="false" text="%menue.themes">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="%menue.dark" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="%menue.light" />
+                    </items>
+                  </Menu>
+          </items>
+        </Menu>
+        <Menu disable="true" text="%menu.tools" />
+        <Menu text="%menu.help">
+          <items>
+            <Menu text="Sprachen">
+                <items>
+                    <MenuItem onAction="#changeLocaleAction" text="DE" />
+                    <MenuItem onAction="#changeLocaleAction" text="EN" />
+                </items>
+            </Menu>
+            <MenuItem onAction="#showWelcomeTabAction" text="%menu.startPage" />
+            <MenuItem disable="true" text="%menu.about" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+   <center>
+      <SplitPane fx:id="mainSplitPane" dividerPositions="0.0, 1.0" minHeight="0.0" prefHeight="0.0" BorderPane.alignment="CENTER">
+         <items>
+            <SplitPane fx:id="leftSplitPane" minHeight="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="150.0" styleClass="leftSide" />
+            <TabPane fx:id="centerTabPane" minHeight="0.0" prefHeight="0.0" styleClass="centerContent" />
+            <SplitPane fx:id="rightSplitPane" minHeight="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="150.0" styleClass="rightSide" />
+         </items>
+      </SplitPane>
+   </center>
+   <bottom>
+    <ToolBar minHeight="24.0" prefHeight="24.0" BorderPane.alignment="CENTER">
+      <items>
+        <Label fx:id="debugLabel" text="Toolbar" />
+      </items>
+    </ToolBar>
+  </bottom>
+
+</BorderPane>

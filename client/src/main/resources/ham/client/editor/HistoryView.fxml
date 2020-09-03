@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="historyView" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ham.client.editor.HistoryComponent">
+    <stylesheets>
+        <URL value="@/ham/client/Globals_dark.css" />
+        <URL value="@/ham/client/editor/HistoryView.css" />
+    </stylesheets>
+   <children>
+      <VBox fx:id="historyVBox" />
+   </children>
+</AnchorPane>

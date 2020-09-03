@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="toolBoxView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.editor.ToolBoxComponent">
+    <stylesheets>
+        <URL value="@/ham/client/Globals_dark.css" />
+        <URL value="@/ham/client/editor/ToolBoxView.css" />
+    </stylesheets>
+   <children>
+      <FlowPane prefHeight="200.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newClassAction" text="%class" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newNoteAction" text="%note" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newAssociationAction" text="%association" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newGeneralizationAction" text="%generalization" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newRealizationAction" text="%realization" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newCompositionAction" text="%composition" />
+            <Button minHeight="100.0" minWidth="110.0" mnemonicParsing="false" onAction="#newAggregrationAction" text="%aggregration" />
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="propertyView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.editor.PropertyComponent">
+    <stylesheets>
+        <URL value="@/ham/client/Globals_dark.css" />
+        <URL value="@/ham/client/editor/PropertyView.css" />
+    </stylesheets>
+   <children>
+      <VBox fx:id="propertyVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="firstVBox">
+               <children>
+                  <Label text="%name">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="propertyNameTextField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox fx:id="positionVBox">
+               <children>
+                  <Label text="%position">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Label>
+                  <HBox>
+                     <children>
+                        <Label text="X:" />
+                        <TextField fx:id="propertyXTextField" maxWidth="60.0" minWidth="60.0" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></TextField>
+                        <Label text="Y:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></Label>
+                        <TextField fx:id="propertyYTextField" maxWidth="60.0" minWidth="60.0" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin></TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="classVBox">
+               <children>
+                  <Label text="%typ">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox>
+                     <children>
+                        <RadioButton fx:id="normalRadioButton" mnemonicParsing="false" text="Normal">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="typ" />
+                           </toggleGroup>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></RadioButton>
+                        <RadioButton fx:id="abstractRadioButton" mnemonicParsing="false" text="Abstract" toggleGroup="$typ">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></RadioButton>
+                        <RadioButton fx:id="interfaceRadioButton" mnemonicParsing="false" text="Interface" toggleGroup="$typ">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></RadioButton>
+                     </children>
+                  </VBox>
+                  <Label text="%property">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="propertyTextArea">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label text="%operation">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="operationTextArea">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox fx:id="noteVBox">
+               <children>
+                  <Label text="%lines" />
+                  <TextArea fx:id="linesTextArea" />
+               </children>
+            </VBox>
+            <VBox fx:id="edgeVBox">
+               <children>
+                  <Label text="%navigable">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <CheckBox fx:id="sourceCheckBox" mnemonicParsing="false" text="%source" />
+                        <CheckBox fx:id="targetCheckBox" mnemonicParsing="false" text="%target">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label text="%sourcerole">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="sourceRoleTextField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="%targetrole">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="targetRoleTextField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="sourcemultiplicity" text="%sourcemultiplicity">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="sourceMultiplicityComboBox" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label text="%targetmultiplicity">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="targetMultiplicityComboBox" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label text="%visibility" />
+                  <VBox>
+                     <children>
+                        <CheckBox fx:id="nameCheckBox" mnemonicParsing="false" text="%name">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="roleNameCheckBox" mnemonicParsing="false" text="%rolename">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="multiplicityCheckBox" mnemonicParsing="false" text="%multiplicity">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox fx:id="lastVBox">
+               <children>
+                  <Label text="%size">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="sizeTextField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="%fontsize">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="fontSizeTextField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="%backgroundcolor">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ColorPicker fx:id="backgroundColorPicker">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ColorPicker>
+                  <Label text="%bordercolor">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ColorPicker fx:id="borderColorPicker">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ColorPicker>
+                  <Label text="%textcolor">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ColorPicker fx:id="textColorPicker">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ColorPicker>
+                  <CheckBox fx:id="updateAllElemnetsCheckBox" mnemonicParsing="false" text="%updateallelemnets">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Button mnemonicParsing="false" onAction="#updateAction" text="%update">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

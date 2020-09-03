@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="basicSideViewPane" minHeight="20.0" minWidth="200.0" prefHeight="300.0" styleClass="basicSideView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.BasicSideComponent">
+    <stylesheets>
+        <URL value="@BasicSideView.css" />
+    </stylesheets>
+   <children>
+      <GridPane styleClass="bsv" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane styleClass="bsvTitle">
+               <children>
+                  <Label text="%title" AnchorPane.leftAnchor="5.0" />
+                  <Button layoutX="139.0" mnemonicParsing="false" onAction="#closeAction" text="X" AnchorPane.rightAnchor="0.0" />
+                  <Button layoutX="52.0" mnemonicParsing="false" onAction="#downAction" text="▼" AnchorPane.rightAnchor="24.0" />
+                  <Button layoutX="79.0" mnemonicParsing="false" onAction="#upAction" text="▲" AnchorPane.rightAnchor="46.0" />
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="bsvScrollPane" minHeight="0.0" minWidth="0.0" styleClass="bsv-scroll-pane" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

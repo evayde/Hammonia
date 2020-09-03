@@ -1,0 +1,61 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #252526;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #2d2d2d;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #929292;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #1e1e1e;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #fff;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+.tab-pane {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #fff;
+}
+
+.split-pane-divider {
+    -fx-background-color: #252526;
+    -fx-padding: 1px;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+ /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+}
+
+.tab-pane .label {
+    -fx-text-fill: #fff;
+}
+
+.leftSide, .rightSide {
+    -fx-background-color: #252526;
+}
+
+.bsvTitle .label {
+    -fx-text-fill: #ccc;
+    -fx-padding: 5px;
+}
+
+.bsvTitle .button {
+    -fx-border-radius: 0;
+    -fx-border-color: transparent;
+    -fx-background-color: #252526;
+    -fx-text-fill: #929292;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 0 0 0;
+}

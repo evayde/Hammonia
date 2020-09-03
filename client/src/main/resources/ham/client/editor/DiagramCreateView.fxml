@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="ProjectCreateView" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.editor.DiagramCreateComponent">
+    <stylesheets>
+        <URL value="@/ham/client/Globals_dark.css" />
+        <URL value="@/ham/client/editor/DiagramCreateView.css" />
+    </stylesheets>
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>           
+              <Label styleClass="h1" text="%diagram.create">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Label>
+            <HBox>
+               <children>
+                    
+                                <Label text="%project.name" />
+                    <Label fx:id="projectName" text="" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                    
+                    <Label styleClass="label" text="%diagram.name" />
+                    <TextField fx:id="diagramName" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <CheckBox fx:id="createTaskCheckBox" mnemonicParsing="false" text="%createTask">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <DatePicker fx:id="dateDatePicker">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+              
+              <Button onAction="#saveDiagramAction" styleClass="form-button" text="%diagram.save">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+       
+   </children>
+</AnchorPane>

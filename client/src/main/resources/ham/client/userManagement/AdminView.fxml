@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.userManagement.AdminComponent">
+    <stylesheets>
+        <URL value="@AdminView.css"/>
+    </stylesheets>
+    <GridPane styleClass="adminTab">
+        <Label text="%admin.adminCenter" styleClass="h1" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3"></Label>
+    </GridPane>
+</AnchorPane>

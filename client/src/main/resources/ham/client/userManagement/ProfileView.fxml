@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="profileTab" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.userManagement.ProfileComponent">
+    <stylesheets>
+        <URL value="@/ham/client/userManagement/ProfileView.css"/>
+    </stylesheets>
+    
+    <GridPane styleClass="profileTab">
+        <Label text="%profile.profileConfig" styleClass="h1" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3"></Label>
+        
+        <Label text="%profile.name" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1"></Label>
+        <TextField fx:id="userName" text="" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.columnSpan="1"></TextField>
+        
+        <Label text="%profile.password" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1"></Label>
+        <PasswordField fx:id="userPassword" text="" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="1"></PasswordField>
+        
+        <Label text="%profile.oldPassword" styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="1"></Label>
+        <PasswordField fx:id="userOldPassword" text="" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.columnSpan="1"></PasswordField>
+        
+        <Button GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" onAction="#editUserAction" styleClass="form-button" text="%profile.save"></Button>
+    </GridPane>
+</AnchorPane>

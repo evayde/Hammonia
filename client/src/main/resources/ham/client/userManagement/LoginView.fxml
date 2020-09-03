@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="loginView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.userManagement.LoginComponent">
+  <stylesheets>
+       <URL value="@/ham/client/userManagement/LoginView.css" />
+   </stylesheets>
+   <children>
+      <VBox prefHeight="241.0" prefWidth="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="%url">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="urlTextField" prefHeight="25.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="%port">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="port"></TextField>
+            <CheckBox fx:id="sslCheckBox" mnemonicParsing="false" text="%ssl">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </CheckBox>
+            <Label text="%email">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+
+            </Label>
+            <TextField fx:id="emailTextField" prefHeight="25.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="%password">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+
+            </Label>
+            <PasswordField fx:id="passwordPasswordField">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></PasswordField>
+            <Button mnemonicParsing="false" onAction="#loginAction" styleClass="form-button" text="%login">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="error" text="">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

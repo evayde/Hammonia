@@ -1,0 +1,136 @@
+/** Reset  styles **/
+.vbox *, .hbox *, .bsv *,.scroll-bar * {
+    -fx-background-color: transparent;
+    -fx-text-fill: #eee;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: -fx-default;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #252525;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+
+.check-box .box {
+  -fx-background-color: #fff;
+  -fx-padding: 1px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color:#333 ;
+}
+
+.radio-button .radio {
+  -fx-background-color: #fff;
+  -fx-padding: 1px;
+}
+
+
+
+.radio-button .dot {
+  -fx-background-color: transparent;
+}
+
+.radio-button:selected .dot{
+    -fx-background-color: #333 ;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #fff;
+    -fx-text-fill: #333; 
+}
+
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: #fff;
+
+}
+
+
+.text-area {
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+    -fx-max-width: 200px;
+}
+
+/** general form styling **/
+.text-field {
+    -fx-background-color: #fff;
+    -fx-text-fill: #333;
+    -fx-max-width: 200px;
+}
+
+.button {
+    -fx-border-color: #929292;
+    -fx-border-width:1.5px;
+}
+
+.button:hover {
+    -fx-background-color: #468bc5;
+    -fx-cursor:hand;
+}
+
+
+/** special style **/
+.mainNav {
+    -fx-background-color: -fx-light;
+    -fx-border-color: -fx-light;
+    -fx-padding: 0;
+}
+
+.mainNav .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+.mainNav .context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #fff;
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0;
+}
+
+.mainNav .menu-item {
+    -fx-padding: 3px 15px 3px 30px;
+}
+
+.mainNav .menu .accelerator-text {
+    -fx-padding: 0px 5px 0px 30px;
+    -fx-text-fill: #ccc;
+}
+
+.mainNav .menu-item:hover .accelerator-text {
+    -fx-text-fill: #000;
+}
+
+.mainNav .menu-item:hover,
+.mainNav .menu-item:showing,
+.mainNav .menu-item:focus,
+.mainNav .menu-item:focused,
+.mainNav .menu-item:active,
+.mainNav .menu:hover,
+.mainNav .menu:focus,
+.mainNav .menu:focused,
+.mainNav .menu:active,
+.mainNav .menu:showing {
+    -fx-background-color: #ebebeb;
+}
+
+.mainNav .seperator-menu-item {
+    -fx-background-color: #e9e9e9;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="canvasAnchorPane" styleClass="diagramView" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ham.client.editor.DiagramComponent">
+    <stylesheets>
+        <URL value="@/ham/client/Globals_dark.css" />
+        <URL value="@/ham/client/editor/DiagramView.css" />
+    </stylesheets>
+   <children>
+      <Canvas fx:id="drawCanvas" onKeyPressed="#keyPressedAction" onKeyReleased="#keyReleasedAction" onMouseClicked="#mouseClickAction" onMouseMoved="#mouseMoveAction" />
+   </children>
+</AnchorPane>
